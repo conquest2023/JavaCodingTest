@@ -23,18 +23,26 @@ public class ISBN {
             if (i%2==1){
                 result+=Integer.valueOf(arr[i])*3;
             }else {
-
                 result+=Integer.valueOf(arr[i]);
             }
         }
-        if(result%10==0){
-            System.out.println(0);
-            return;
+        int answer=0;
+        while (true){
+            if (check){
+                if(((answer*3)+result)%10==0){
+                    System.out.println(answer);
+                    break;
+                }
+
+            }else{
+                if((answer+result)%10==0){
+                    System.out.println(answer);
+                    break;
+                }
+            }
+            answer++;
+
         }
-        if (check){
-            System.out.println((10-(result%10))/3);
-        }else{
-            System.out.println(10-(result%10));
-        }
+
     }
 }
