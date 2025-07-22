@@ -22,7 +22,6 @@ public class 안전영역 {
         sc.nextLine();
         arr= new int[a][a];
         int max=0;
-        visited=new int[a][a];
         for (int i = 0; i < a; i++) {
             int[] array = Arrays.stream(sc.nextLine().split(" ")).mapToInt(o -> Integer.valueOf(o)).toArray();
             int idx = Arrays.stream(array).max().getAsInt();
@@ -36,6 +35,7 @@ public class 안전영역 {
         int idx=1;
         int[] answer=new int[max];
         while (max!=0) {
+            visited=new int[a][a];
             for (int i = 0; i < a; i++) {
                 for (int j = 0; j < a; j++) {
                     if (visited[i][j] == 0 && arr[i][j]>=idx) {
@@ -44,7 +44,6 @@ public class 안전영역 {
                     }
                 }
             }
-            visited=new int[a][a];
             answer[idx-1]=count;
             count = 0;
             idx+=1;
