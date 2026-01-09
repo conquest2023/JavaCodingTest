@@ -1,4 +1,4 @@
-package datasturcture;
+package baekjoon.math;
 
 import java.util.*;
 
