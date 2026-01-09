@@ -1,0 +1,55 @@
+package datasturcture.practice;
+import java.io.*;
+import java.util.*;
+
+public class TreeArray {
+    static int[] left = new int[26];
+    static int[] right = new int[26];
+    static StringBuilder pre = new StringBuilder();
+    static StringBuilder in  = new StringBuilder();
+    static StringBuilder post= new StringBuilder();
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        Arrays.fill(left, -1);
+        Arrays.fill(right, -1);
+
+
+        for (int i = 0; i < n; i++) {
+            String[] sp = br.readLine().split(" ");
+            int p = sp[0].charAt(0) - 'A';
+            char lc = sp[1].charAt(0), rc = sp[2].charAt(0);
+            if (lc != '.') left[p]  = lc - 'A';
+            if (rc != '.') right[p] = rc - 'A';
+        }
+
+        int root = 0; // 'A'
+        preorder(root);
+        inorder(root);
+        postorder(root);
+
+        System.out.println(pre);
+        System.out.println(in);
+        System.out.println(post);
+    }
+
+    static void preorder(int cur) {
+        if (cur == -1) return;
+        pre.append((char)(cur + 'A'));
+        preorder(left[cur]);
+        preorder(right[cur]);
+    }
+    static void inorder(int cur) {
+        if (cur == -1) return;
+        inorder(left[cur]);
+        in.append((char)(cur + 'A'));
+        inorder(right[cur]);
+    }
+    static void postorder(int cur) {
+        if (cur == -1) return;
+        postorder(left[cur]);
+        postorder(right[cur]);
+        post.append((char)(cur + 'A'));
+    }
+}
