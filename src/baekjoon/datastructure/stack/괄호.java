@@ -1,7 +1,6 @@
-package datasturcture.stack;
+package baekjoon.stack;
 
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.Scanner;
 

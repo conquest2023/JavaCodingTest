@@ -1,4 +1,4 @@
-package datasturcture.stack;
+package baekjoon.stack;
 
 import java.util.*;
 

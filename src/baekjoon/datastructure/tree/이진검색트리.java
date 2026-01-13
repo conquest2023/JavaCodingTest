@@ -1,4 +1,4 @@
-package datasturcture.tree;
+package baekjoon.tree;
 
 import java.util.Scanner;
 

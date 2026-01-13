@@ -1,9 +1,8 @@
-package datasturcture.tree;
+package baekjoon.tree;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class 트리순회 {
 

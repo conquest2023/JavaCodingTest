@@ -1,4 +1,4 @@
-package datasturcture.list.answer;
+package baekjoon.list.answer;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,5 @@
-package datasturcture.stack;
+package baekjoon.stack;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 public class 수찾기 {

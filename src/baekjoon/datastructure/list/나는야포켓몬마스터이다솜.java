@@ -1,4 +1,4 @@
-package datasturcture.list;
+package baekjoon.list;
 
 import java.util.HashMap;
 import java.util.Map;

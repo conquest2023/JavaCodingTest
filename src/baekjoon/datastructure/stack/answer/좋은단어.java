@@ -1,4 +1,4 @@
-package datasturcture.stack.answer;
+package baekjoon.stack.answer;
 
 import java.util.Scanner;
 
