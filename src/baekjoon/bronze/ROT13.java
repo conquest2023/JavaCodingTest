@@ -1,6 +1,5 @@
-package datasturcture.bronze;
+package baekjoon.bronze;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ROT13 {
